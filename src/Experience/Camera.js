@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import Experience from './Experience.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 export default class Camera
@@ -6,7 +7,7 @@ export default class Camera
     constructor(_options)
     {
         // Options
-        this.experience = window.experience
+        this.experience = new Experience()
         this.config = this.experience.config
         this.debug = this.experience.debug
         this.time = this.experience.time

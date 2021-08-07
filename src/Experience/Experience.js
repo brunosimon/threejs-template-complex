@@ -12,10 +12,17 @@ import assets from './assets.js'
 
 export default class Experience
 {
+    static instance
+
     constructor(_options = {})
     {
-        window.experience = this
+        if(Experience.instance)
+        {
+            return Experience.instance
+        }
+        Experience.instance = this
 
+        // Options
         this.targetElement = _options.targetElement
 
         if(!this.targetElement)
@@ -129,9 +136,6 @@ export default class Experience
 
         if(this.world)
             this.world.resize()
-
-        if(this.navigation)
-            this.navigation.resize()
     }
 
     destroy()
