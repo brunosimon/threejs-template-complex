@@ -22,6 +22,7 @@
     "stats.js": "^0.17.0",
     "style-loader": "^3.3.0",
     "three": "^0.132.2",
+    "tweakpane": "^3.0.5",
     "webpack": "^5.53.0",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.1",
