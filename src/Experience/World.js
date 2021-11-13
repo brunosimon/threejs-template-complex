@@ -21,6 +21,8 @@ export default class World
 
     setDummy()
     {
+        this.resources.items.lennaTexture.encoding = THREE.sRGBEncoding
+        
         const cube = new THREE.Mesh(
             new THREE.BoxGeometry(1, 1, 1),
             new THREE.MeshBasicMaterial({ map: this.resources.items.lennaTexture })

@@ -1,4 +1,6 @@
 import * as THREE from 'three'
+import GUI from 'lil-gui'
+
 import Time from './Utils/Time.js'
 import Sizes from './Utils/Sizes.js'
 import Stats from './Utils/Stats.js'
@@ -34,6 +36,7 @@ export default class Experience
         this.time = new Time()
         this.sizes = new Sizes()
         this.setConfig()
+        this.setDebug()
         this.setStats()
         this.setScene()
         this.setCamera()
@@ -63,6 +66,14 @@ export default class Experience
         const boundings = this.targetElement.getBoundingClientRect()
         this.config.width = boundings.width
         this.config.height = boundings.height || window.innerHeight
+    }
+
+    setDebug()
+    {
+        if(this.config.debug)
+        {
+            this.debug = new GUI()
+        }
     }
 
     setStats()
