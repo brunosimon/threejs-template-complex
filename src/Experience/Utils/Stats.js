@@ -24,7 +24,7 @@ export default class Stats
         document.body.appendChild(this.instance.dom)
     }
 
-    deactivate()
+    desactivate()
     {
         this.active = false
 
@@ -42,7 +42,7 @@ export default class Stats
 
         if(!webGL2 || !this.render.extension)
         {
-            this.deactivate()
+            this.desactivate()
         }
     }
 
@@ -116,6 +116,6 @@ export default class Stats
 
     destroy()
     {
-        this.deactivate()
+        this.desactivate()
     }
 }
