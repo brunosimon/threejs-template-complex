@@ -5,7 +5,7 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js'
 
-export default class Resources extends EventEmitter
+export default class Loader extends EventEmitter
 {
     /**
      * Constructor
@@ -65,7 +65,7 @@ export default class Resources extends EventEmitter
                 {
                     this.fileLoadEnd(_resource, _data)
 
-                    DRACOLoader.releaseDecoderModule()
+                    dracoLoader.dispose()
                 })
             }
         })
