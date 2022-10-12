@@ -17,10 +17,7 @@ export default class Renderer
         this.camera = this.experience.camera
 
         // Debug
-        if(this.debug)
-        {
-            this.debugFolder = this.debug.addFolder('renderer')
-        }
+        this.debugFolder = this.debug?.addFolder('renderer')
         
         this.usePostprocess = false
 
@@ -58,10 +55,7 @@ export default class Renderer
         this.context = this.instance.getContext()
 
         // Add stats panel
-        if(this.stats)
-        {
-            this.stats.setRenderPanel(this.context)
-        }
+        this.stats?.setRenderPanel(this.context)
         
         // Debug
         if(this.debug)
@@ -151,10 +145,7 @@ export default class Renderer
 
     update()
     {
-        if(this.stats)
-        {
-            this.stats.beforeRender()
-        }
+        this.stats?.beforeRender()
 
         if(this.usePostprocess)
         {
@@ -165,10 +156,7 @@ export default class Renderer
             this.instance.render(this.scene, this.camera.instance)
         }
 
-        if(this.stats)
-        {
-            this.stats.afterRender()
-        }
+        this.stats?.afterRender()
     }
 
     destroy()
