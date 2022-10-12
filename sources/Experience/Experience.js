@@ -139,14 +139,11 @@ export default class Experience
 
         this.config.pixelRatio = Math.min(Math.max(window.devicePixelRatio, 1), 2)
 
-        if(this.camera)
-            this.camera.resize()
+        this.camera?.resize()
 
-        if(this.renderer)
-            this.renderer.resize()
+        this.renderer?.resize()
 
-        if(this.world)
-            this.world.resize()
+        this.world?.resize()
     }
 
     destroy()
